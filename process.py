@@ -9,8 +9,8 @@ def txtencode(string):
         #return string
 
 wb = xlrd.open_workbook('CombinedNamed.xlsx', encoding_override="latin-1")
-sh = wb.sheet_by_name('Combine Sheet')
-your_csv_file = open('CombineSheet2.csv', 'wb')
+sh = wb.sheet_by_name('Sheet1')
+your_csv_file = open('Sheet1.csv', 'wb')
 wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL)
 
 for rownum in xrange(sh.nrows):
